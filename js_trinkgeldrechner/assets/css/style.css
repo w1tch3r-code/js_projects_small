@@ -48,27 +48,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    transition: all 1s ease-in-out;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 /* ========================================================== 
                             Content
 ========================================================== */
 
-.slider___wrapper {
-    display: flex;
-    flex-direction: column;
-    width: clamp(600px, 50%, 30vw);
-}
-
-label {
-    margin-bottom: 5px;
-}
-
-#output {
-    margin-top: 2vh;
-    font-size: 1.1rem;
-    line-height: 2rem;
-    font-weight: bold;
-}

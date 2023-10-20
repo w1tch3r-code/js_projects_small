@@ -1,8 +1,8 @@
 "use strict";
 
 // ===================================================
-//           JS-Vertiefung – Horoskop
+//          JS-Vertiefung – Trinkgeldrechner
 // ===================================================
 
-console.log("%c JS-Vertiefung – Horoskop", "color: tomato");
+console.log("%c JS-Vertiefung – Trinkgeldrechner", "color: tomato");
 

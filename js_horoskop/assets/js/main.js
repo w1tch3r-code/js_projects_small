@@ -94,7 +94,7 @@ function showHoroscop() {
 
 		outputElement.innerHTML +=
 			"<p>Pick a cultural event that's coming up and get some tickets for it today.</p>";
-	} else if (input === "Okt" || input === "okt") {
+	} else if (input === "Oct" || input === "oct") {
 
         outputElement.innerHTML =
 			'<img src="https://www.horoscopedates.com/img/icon_scorpio.png" alt="">';

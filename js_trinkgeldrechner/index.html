@@ -4,14 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS-Vertiefung – Horoskop</title>
+    <title>JS-Vertiefung – Trinkgeldrechner</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    
-    <div id="output"></div>
-</div>
+    <div class="wrapper">
+        <section class="trinkgeld-wrapper">
+            <p class="headline">Trinkgeldrechner</p>
+            <form onsubmit="return false">
+                <input type="text" name="month" id="month">
+                <input type="submit" value="Show" onclick="showHoroscop()">
+            </form>
+            <div class="output">
+            </div>
+        </section>
+    </div>
     
     <script src="./assets/js/main.js"></script>
 </body>
