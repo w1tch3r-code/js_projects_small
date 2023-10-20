@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Vertiefung – Counter</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="counter-wrapper">
+            <h1 class="counter-headline">Counter</h1>
+            <span class="counter-number">0</span>
+        <!-- <form class="btns-wrapper">
+        <input type="button" class="btn" value="+1">
+        <input type="button" class="btn" value="-1">
+        <input type="button" class="btn" value="+10">
+        <input type="button" class="btn" value="-10">
+        <input type="button" class="btn" value="+100">
+        <input type="button" class="btn" value="-100">
+        <input type="button" class="btn" value="Reset">
+        <input type="button" class="btn" value="*2">
+        </form> -->
+            <div class="btn-wrapper">
+                <button class="btn" type="button" onclick="addNumber(1)">+1</button>
+                <button class="btn" type="button" onclick="substractNumber(1)">-1</button>
+                <button class="btn" type="button" onclick="addNumber(10)">+10</button>
+                <button class="btn" type="button" onclick="substractNumber(10)">-10</button>
+                <button class="btn" type="button" onclick="addNumber(100)">+100</button>
+                <button class="btn" type="button" onclick="substractNumber(100)">-100</button>
+                <button class="btn" type="reset" onclick="resetNumberField()">Reset</button>
+                <button class="btn" type="button" onclick="multiplyNumber(2)">*2</button>
+            </div>
+        </section>
+    </div>
+</div>
+    
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
