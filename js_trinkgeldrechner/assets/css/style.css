@@ -44,18 +44,104 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: lightgray;
     height: 100vh;
-    scroll-behavior: smooth;
     display: flex;
     justify-content: center;
     align-items: center;
+    scroll-behavior: smooth;
 }
 
-.wrapper {
+/* .wrapper {
     max-width: 1440px;
     margin: 0 auto;
-}
+    
+} */
 
 /* ========================================================== 
                             Content
 ========================================================== */
 
+.tip-wrapper {
+    width: clamp(400px, 50%, 550px);
+    background-color: #CE71CF;
+    padding-block: 40px;
+    padding-inline: 40px;
+    border-radius: 20px;
+}
+
+.headline {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 3px solid black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-bottom: 8px;
+}
+
+label {
+    display: block;
+    padding-bottom: 10px;
+    margin-left:38px;
+}
+
+form input, select {
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+form input:not(input[type="submit"]), select {
+    width: 100%;
+    padding: 8px;
+}
+
+select {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+form input[type="submit"] {
+    padding: 10px 40px;
+    background-color: #4F3B4F;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+    background-color: white;
+    color: #4F3B4F;
+}
+
+.amount div, .persons div {
+    display: flex;
+    gap: 5px;
+}
+
+svg {
+    fill: #ffffff;
+    background-color: #4F3B4F;
+    width: 35px;
+    height: 30px;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.calc {
+    text-align: center;
+    
+}
+
+.output {
+    opacity: 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgba(79, 59, 79, 0.5);
+    line-height: 2rem;
+    transition: all 1s ease-in;
+}
