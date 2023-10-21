@@ -16,7 +16,10 @@ const output = document.querySelector(".output");
 function tip() {
 	let tip;
 
-	if (service.value === "super") {
+	if (service.value === "selection") {
+		output.innerHTML = `<p>Bitte geben Sie eine Servicequalität an!</p>`;
+		return false;
+	} else if (service.value === "super") {
 		tip = Number(amount.value) * 0.2;
 		output.innerHTML = `<p>Das Trinkgeld beträgt ${tip.toFixed(2).replace(".", ",")} €</p>`;
 	} else if (service.value === "okay") {
