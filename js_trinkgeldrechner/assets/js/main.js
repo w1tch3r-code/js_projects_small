@@ -17,17 +17,22 @@ function tip() {
 	let tip;
 
 	if (service.value === "selection") {
-		output.innerHTML = `<p>Bitte geben Sie eine Servicequalität an!</p>`;
 		return false;
 	} else if (service.value === "super") {
 		tip = Number(amount.value) * 0.2;
-		output.innerHTML = `<p>Das Trinkgeld beträgt ${tip.toFixed(2).replace(".", ",")} €</p>`;
+		output.innerHTML = `<p>Das Trinkgeld beträgt ${tip
+			.toFixed(2)
+			.replace(".", ",")} €</p>`;
 	} else if (service.value === "okay") {
 		tip = Number(amount.value) * 0.1;
-		output.innerHTML = `<p>Das Trinkgeld beträgt ${tip.toFixed(2).replace(".", ",")} €</p>`;
+		output.innerHTML = `<p>Das Trinkgeld beträgt ${tip
+			.toFixed(2)
+			.replace(".", ",")} €</p>`;
 	} else if (service.value === "schlecht") {
 		tip = Number(amount.value) * 0.02;
-		output.innerHTML = `<p>Das Trinkgeld beträgt ${tip.toFixed(2).replace(".", ",")} €</p>`;
+		output.innerHTML = `<p>Das Trinkgeld beträgt ${tip
+			.toFixed(2)
+			.replace(".", ",")} €</p>`;
 	}
 
 	return tip;
@@ -36,7 +41,7 @@ function tip() {
 //  Gesamtsumme
 function total() {
 	let total = Number(amount.value) + tip();
-    total = total.toFixed(2).replace(".", ",")
+	total = total.toFixed(2).replace(".", ",");
 	output.innerHTML += `<p>Die Gesamtsumme beträgt ${total} €</p>`;
 }
 
@@ -53,7 +58,11 @@ btnCalc.addEventListener("click", (event) => {
 
 	output.style.opacity = "1";
 
-	tip();
-	total();
-	priceProPerson();
+	if (tip() === false) {
+		output.innerHTML = `<p>Bitte geben Sie eine Servicequalität an!</p>`;
+	} else {
+		tip();
+		total();
+		priceProPerson();
+	}
 });
