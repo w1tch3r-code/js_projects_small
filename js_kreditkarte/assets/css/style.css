@@ -46,6 +46,7 @@ img {
 ========================================================== */
 
 body {
+    margin-top: 50px;
     font-family: 'Roboto';
     background-color: lightgray;
     height: 100vh;
@@ -88,6 +89,18 @@ form input {
     border: 1px solid #767676;
 }
 
+form input:required:valid { 
+    border: 2px solid green;
+    color: green;
+    font-weight: bold;
+}
+
+form input:required:invalid { 
+    border: 2px solid #E5696B;
+    color: #E5696B;
+    font-weight: bold;
+}
+
 form input:not(input[type="submit"], input[type="month"]) {
     width: 100%;
     padding: 10px;
@@ -96,6 +109,11 @@ form input:not(input[type="submit"], input[type="month"]) {
 form input[type="month"] {
     padding: 8px;
     width: 180px;
+    font-size: 0.93rem;
+}
+
+input[type="number"] {
+    min-width: 60px;
 }
 
 form input[type="submit"] {
@@ -105,11 +123,13 @@ form input[type="submit"] {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
 }
 
 form input[type="submit"]:hover {
-    background-color: white;
-    color: #E5696B;
+    background-color: #a24b4c;
 }
 
 .expiration-date__cvv {
@@ -166,5 +186,10 @@ form input[type="submit"]:hover {
 .output div:nth-of-type(3) {
     font-size: 1rem;
     color: #000;
-    font-weight: 400;
+    font-weight: 600;
+}
+
+.info {
+    text-align: center;
+    font-weight: bold;
 }

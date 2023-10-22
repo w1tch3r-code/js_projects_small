@@ -15,38 +15,39 @@
                 <img src="./assets/images/chip.png" alt="Chip">
                 <img src="./assets/images/symbols.png" alt="VISA">
             </div>
-            <p>#### #### #### ####</p>
+            <p class="card-number">#### #### #### ####</p>
             <div>
                 <p>Card Holder</p>
                 <p>Expires</p>
                 
             </div>
             <div>
-                <p>FULL NAME</p>
-                <p>MM/YY</p>
+                <p class="card-holder">FULL NAME</p>
+                <p class="expiration-date">MM/YY</p>
             </div>
         </div>
-        <form>
+        <form onsubmit="return false">
             <div class="card-number">
                 <label for="card-number">Card Number</label>
-                <input type="number" name="card-number" id="card-number">
+                <input type="number" name="card-number" id="card-number" min="1000000000000000" max="9999999999999999" placeholder="#### #### #### ####" pattern="^[0-9]{16}$" required>
             </div>
             <div class="card-holder">
                 <label for="card-holder">Card Holder</label>
-                <input type="text" name="card-holder" id="card-holder" placeholder="Max Mustermann">
+                <input type="text" name="card-holder" id="card-holder" placeholder="Max Mustermann" pattern="^[a-zA-ZäöüßÄÖÜ ]*$" required>
             </div>
             <div class="expiration-date__cvv">
                 <div>
                     <label for="expiration-date">Expiration Date</label>
-                    <input type="month" name="expiration-date" id="expiration-date">
+                    <input type="month" name="expiration-date" id="expiration-date" required>
                 </div>
                 <div>
                     <label for="cvv">CVV</label>
-                    <input type="number" name="cvv" id="cvv">
+                    <input type="number" name="cvv" id="cvv" max="999" placeholder="xxx" pattern="^[0-9]{3}$" required>
                 </div>
             </div>
             <div class="submit"><input type="submit" value="Submit" id="btn-submit"></div>
         </form>
+        <p class="info"></p>
     </section>
 
     <script src="./assets/js/main.js"></script>
