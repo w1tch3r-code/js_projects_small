@@ -4,15 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS-Vertiefung – Horoskop</title>
+    <title>JS-Vertiefung – Kreditkarte</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    
-    <div id="output"></div>
-</div>
-    
+    <section class="creditcard-wrapper">
+        <div class="output">
+            <div>
+                <img src="./assets/images/chip.png" alt="Chip">
+                <img src="./assets/images/symbols.png" alt="VISA">
+            </div>
+            <p>#### #### #### ####</p>
+            <div>
+                <p>Card Holder</p>
+                <p>Expires</p>
+                
+            </div>
+            <div>
+                <p>FULL NAME</p>
+                <p>MM/YY</p>
+            </div>
+        </div>
+        <form>
+            <div class="card-number">
+                <label for="card-number">Card Number</label>
+                <input type="number" name="card-number" id="card-number">
+            </div>
+            <div class="card-holder">
+                <label for="card-holder">Card Holder</label>
+                <input type="text" name="card-holder" id="card-holder" placeholder="Max Mustermann">
+            </div>
+            <div class="expiration-date__cvv">
+                <div>
+                    <label for="expiration-date">Expiration Date</label>
+                    <input type="month" name="expiration-date" id="expiration-date">
+                </div>
+                <div>
+                    <label for="cvv">CVV</label>
+                    <input type="number" name="cvv" id="cvv">
+                </div>
+            </div>
+            <div class="submit"><input type="submit" value="Submit" id="btn-submit"></div>
+        </form>
+    </section>
+
     <script src="./assets/js/main.js"></script>
 </body>
 

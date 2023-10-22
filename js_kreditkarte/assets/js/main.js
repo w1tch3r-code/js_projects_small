@@ -1,8 +1,8 @@
 "use strict";
 
 // ===================================================
-//           JS-Vertiefung – Horoskop
+//           JS-Vertiefung – Kreditkarte
 // ===================================================
 
-console.log("%c JS-Vertiefung – Horoskop", "color: tomato");
+console.log("%c JS-Vertiefung – Kreditkarte", "color: tomato");
 

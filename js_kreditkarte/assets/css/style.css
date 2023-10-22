@@ -32,6 +32,11 @@ img {
                             Fonts
 ========================================================== */
 
+@font-face {
+    font-family: 'Roboto';
+    src: url('./../fonts/Roboto-Regular.ttf');
+}
+
 /* ========================================================== 
                 Variables / Custom Properties
 ========================================================== */
@@ -41,34 +46,125 @@ img {
 ========================================================== */
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto';
     background-color: lightgray;
     height: 100vh;
-    scroll-behavior: smooth;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    transition: all 1s ease-in-out;
+    scroll-behavior: smooth;
 }
+
+/* .wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    
+} */
 
 /* ========================================================== 
                             Content
 ========================================================== */
 
-.slider___wrapper {
-    display: flex;
-    flex-direction: column;
-    width: clamp(600px, 50%, 30vw);
+.creditcard-wrapper {
+    position: relative;
+    max-width: 420px;
+    background-color: white;
+    padding-block: 100px 50px;
+    padding-inline: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
 }
+
 
 label {
-    margin-bottom: 5px;
+    display: block;
+    padding-bottom: 5px;
+    font-size: 0.8rem;
 }
 
-#output {
-    margin-top: 2vh;
-    font-size: 1.1rem;
-    line-height: 2rem;
+form input {
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px solid #767676;
+}
+
+form input:not(input[type="submit"], input[type="month"]) {
+    width: 100%;
+    padding: 10px;
+}
+
+form input[type="month"] {
+    padding: 8px;
+    width: 180px;
+}
+
+form input[type="submit"] {
+    padding: 15px 60px;
+    background-color: #E5696B;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+
+form input[type="submit"]:hover {
+    background-color: white;
+    color: #E5696B;
+}
+
+.expiration-date__cvv {
+    display: flex;
+    gap: 10px;
+}
+
+.expiration-date__cvv div:nth-of-type(2) label {
+    text-align: right;
+}
+
+.submit {
+    text-align: center;
+    
+}
+
+.output {
+    position: absolute;
+    top: -130px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 370px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background: url('./../images/background.png') center / cover no-repeat;
+    transition: background 1s ease-in;
+}
+
+.output img {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 50px;
+}
+
+.output div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.output > p {
+    font-size: 1rem;
+    color: #000;
     font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.output div:nth-of-type(2) {
+    font-size: 0.75rem;
+    color: #414141;
+}
+
+.output div:nth-of-type(3) {
+    font-size: 1rem;
+    color: #000;
+    font-weight: 400;
 }
